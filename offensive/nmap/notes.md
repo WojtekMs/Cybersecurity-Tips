@@ -88,7 +88,7 @@ You can use
 - nmap-vulners repository
 
 After downloading, go to folder which contains both repositories and use command
-- nmap --script vulscan, nmap-vulners -sV [ip-addr-target]
+- nmap -sV --script vulscan/vulscan.nse,nmap-vulners/vulners.nse [ip-addr-target]
 
 ### Vulnerabilities
 If the host has vulnerabilities on certain ports, the script will show them. Each vulnerability has a score which shows how easy it is to use them [10.0 very easy, 1.0 very hard].

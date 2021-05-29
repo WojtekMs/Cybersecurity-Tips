@@ -13,6 +13,8 @@ After starting the interactive msfconsole you can still use all your external sh
 - nmap
 - ifconfig  
 
+When trying to select an exploit it is good idea to use an external nmap script prepared to find out all potential vulnerabilities which you can use.
+
 
 ## Terminology
 - Exploit - take advantage of a vulnerable software to start reverse shell or rootkit.
