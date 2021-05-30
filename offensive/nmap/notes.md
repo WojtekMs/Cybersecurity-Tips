@@ -10,6 +10,7 @@ If you want to see the progress of the scanning use arrow up while the nmap is r
 - nmap -P [first port]-[last port] [network]
 - nmap -P 1-65535 192.168.0.0/24
 
+
 # Scan fast
 This option scans only the first 100 ports.
 - nmap -F [network]
@@ -96,6 +97,11 @@ If the host has vulnerabilities on certain ports, the script will show them. Eac
 ### Exploiting vulnerabilities  
 Next step is trying to exploit a vulnerability, so we should search in the google for the vulnerability & exploits. There are available some source codes that exploit some vulnerabilities, which you can download, compile and use. Of course you would have to change some ip-addresses, port number etc. Additionally you can use metasploit framework.
 
+# Show opened ports
+- nmap -sT [IP]
+
+# Show vulnarabilities
+- nmap --script vulln [IP]
 
 
 
