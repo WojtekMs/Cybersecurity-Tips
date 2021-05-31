@@ -24,7 +24,7 @@ Go inside /etc/snort/snort.conf file.
 # Example rules
 alert tcp any any -> $HOME_NET 21 (msg: "FTP connection attemp"; sid: 1000001; rev:1;) - alert on any ftp connection attempt
 
-alert tcp any any -> 192.168.1.4 22 (msg: "FTP connection attemp"; sid: 1000001; rev:1;) - alert on specyfic ip ssh connection attempt
+alert tcp any any -> 192.168.1.4 22 (msg: "SSH connection attemp"; sid: 1000001; rev:1;) - alert on specyfic ip ssh connection attempt
 
 # Using
 - snort -T -c /etc/snort/snort.conf (test)
