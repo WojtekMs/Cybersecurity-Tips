@@ -31,3 +31,11 @@ When we have a server we have to think about FORWARD!
 
 This blocks everything on the linux server and we have to decide what to let inside.
 
+# Logging
+Logs are kept inside /var/log
+
+## Make sure you log privileged commands
+
+## Make sure you log file deletions
+
+## Make sure login & logout events are monitored
