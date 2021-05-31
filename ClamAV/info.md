@@ -21,3 +21,19 @@ cat /var/log/clamav/clamav.log - check if it's running
 
 sudo clamdscan --fdpass - scan using clamd
 
+
+/usr/local/clamav/script/clamscan_daily
+----
+TMP_LOG=/var/log/clamav/clam.daily
+
+#! /bin/bash
+if [[ ! -e ${TMP_LOG} ]]; then
+    mkdir -p /var/log/clamav
+    touch /var/log/clamav/file.txt
+fi
+clamscan -r / --quiet --infected --log=${TMP_LOG}
+
+crontab -e
+*/15 * * * * /usr/local/clamav/script/clamscan_hourly
+
+chmod +x /usr/local/clamav/script/clamscan_daily
