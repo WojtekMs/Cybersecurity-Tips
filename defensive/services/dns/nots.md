@@ -35,6 +35,17 @@ Inside a zone you can define
 ### Hide your DNS server version
 - /etc/bind/named.conf.options
 - version "hidden";
+  
+### Restrict zone transfers
+Zone transfer requests are viable but only from slave domain name servers. In case your DNS is a slave you should forbid transfers
+- /etc/bind/named.conf.default-zones
+- allow-transfer {"none";};
+
+### Restrict respones
+This feature is available in bind >= 9.10.  
+To check bind version use: named -v
+- /etc/bind/named.conf.options
+- rate-limit {responses-per-second 10; };
 
 ### Restrict queries
 If you know that your DNS server is only supposed to get queries from certain networks (for example only LAN) restrict bind:
@@ -46,5 +57,18 @@ If your DNS server runs on multiple interfaces (many ip-addresses) you can restr
 - /etc/bind/name.conf.options
 - listen-on {[interface];};
 
+### Restrict recursion
+Recursion can lead to DNS poisoning attacks / DNS amplification attacks.
+- /etc/bind/name.conf.options
+- allow-recursion {localhost;};
 
+### Logging
+Logging DNS queries.
+- etc/bind/name.conf.options
+- logging {channel query.log  { file "/var/log/named/query.log"; severity debug 3; print-time yes;} category queries { query.log; }};
+
+## DNS Service
+There are different services running DNS, for example:
+- service named start
+- service bind9 start
 

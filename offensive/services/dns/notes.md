@@ -6,3 +6,8 @@ To see a list of domain name servers which you can later use to try zone transfe
 # Zone Transfer Attack
 Try using
 - dig axfr [ip addr of DNS server]
+
+# Find DNS version
+- dig @[dns-ip-addr] -c CH -t txt version.bind
+
+#

@@ -21,6 +21,11 @@
 ### Add user to another group
 - sudo usermod -aG [group] [user]
 
+### Remove user from group
+I don't know the command to remove just one group. You can assign new list of groups to a user and ommit the groups you want to remove
+- sudo usermod -G [group list] [user]
+- sudo usermod -G wojtek sudo docker wojtek
+
 ### Change home directory
 This also moves the content of the original home directory to the new home directory
 - sudo usermod -m -d [new home dir] [user]

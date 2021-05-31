@@ -1,7 +1,7 @@
 # Hardening
 
 # Limit roles to single machine
-It's best to seperate services to different machines, so that when one is down only one service is dead
+It's best to seperate services to different machines, so that when one is down only one service is dead. If you cannot do that seperate the services to different dockers or at least use chroot.
 
 # Least privilege rule
 User accounts & machines should only get the access they need to perform their actions, not any more!
@@ -39,3 +39,8 @@ Logs are kept inside /var/log
 ## Make sure you log file deletions
 
 ## Make sure login & logout events are monitored
+
+# Disable root login
+Change root shell to /usr/sbin/nologin. This way only the users in sudo group will have root permissions.
+
+# 
