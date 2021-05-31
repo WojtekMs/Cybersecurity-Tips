@@ -29,7 +29,7 @@ Go inside /etc/snort/snort.conf file.
 
 # Destination operator
 - -> 
-- <.>
+- <>
 
 # Example rules
 alert tcp any any -> $HOME_NET 21 (msg: "FTP connection attemp"; sid: 1000001; rev:1;) - alert on any ftp connection attempt
