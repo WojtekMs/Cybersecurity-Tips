@@ -72,3 +72,5 @@ There are different services running DNS, for example:
 - service named start
 - service bind9 start
 
+## Chrooting DNS
+- https://tldp.org/HOWTO/Chroot-BIND-HOWTO-2.html
