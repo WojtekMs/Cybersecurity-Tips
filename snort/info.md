@@ -5,6 +5,16 @@ Go inside /etc/snort/snort.conf file.
 - include your rules (if you added any) (include $RULE_PATH/custom.rules)
 (sed -i "s/include \$RULE\_PATH/#include \$RULE\_PATH/" /etc/snort/snort.conf - Comment out all rulesets)
 
+# Setting variables
+
+## Network variable
+- ipvar [name] [network-ip-addr]
+- ipvar HOME_NET 192.168.0.0/24
+
+## List of ports
+- portvar [name] [[port1, port2, port3]]
+- portvar SERVICE_PORTS [21, 22, 53, 80]
+
 # Rule structure
 [Actions] [Protocol] [Source IP ADDR] [Source PortNo] [DirectionOperator] [Destination IP] [Destination Port] [rule options]
 
