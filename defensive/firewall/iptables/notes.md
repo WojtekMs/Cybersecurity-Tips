@@ -35,4 +35,4 @@ Try to organize your iptables commands in this order, it will be easier to remem
 
 2. All the rules specified in the firewall are in specific order. This order is important! If packet is resolved by a certain rule no more rules are going to be checked (the same pattern as exception matching in Python/C++). You have remember about the order of the rules, it is essential in achieving good results!!!
 
-3. There is also --sport, perhaps it is the source port? Does it matter in the OUTPUT chain if we use the source port??? What can source port information be used for? Check this. 
+3. There is also --sport, it is the source port and it does matter in the OUTPUT chain if we use the source port. It can be used to allow output movement that is a response to an already established connection, for example on port 22 (SSH service).
